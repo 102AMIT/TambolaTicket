@@ -17,7 +17,6 @@ const port = process.env.PORT || 8000;
 
 
 // api routes 
-
 app.use('/', router);
 
 // Error handling middleware
@@ -25,19 +24,19 @@ app.use(function(err, req, res, next) {
     res.status(422).send({error: err.message});
 });
 
-// start server only we have databse valid connection 
-connect().then(() => {
-    try {
-        app.listen(port, (err) => {
-            if (err) console.log("Error in Backend server start");
-            console.log(`Server connected to port :${port}`);
-        })
+// start server only we have database valid connection 
+connect()
+  .then(() => {
+    app.listen(port, (err) => {
+      if (err) {
+        throw new Error("Error in Backend server start");
+      }
+      console.log(`Server connected to port: ${port}`);
+    });
+  })
+  .catch((err) => {
+    throw new Error(`Invalid database connection... ${err}`);
+  });
 
-    } catch (err) {
-        console.log(`Cannot connect to the server ${err}`)
-    }
-}).catch(err => {
-    console.log(`Invalid database connection... ${err}`)
-})
 
 

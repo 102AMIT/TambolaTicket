@@ -34,7 +34,6 @@ export const createTicket = async (req, res) => {
     }
     res.status(201).json({ message: "Ticket created successfully" });
   } catch (error) {
-    console.log(error)
     res.status(500).json({ error: "Failed to create ticket" });
   }
 };
@@ -43,7 +42,6 @@ export const fetchTickets = async (req, res) => {
   const userId = req.params.userId;
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 6;
-  console.log(userId, "userId")
 
   try {
     // Get total count of tickets
