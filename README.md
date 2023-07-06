@@ -18,21 +18,21 @@ Packages Use :
               stop and restart the server after making code changes.
 
 
-
-1 . First, the user needs to register. To register, you must provide a unique username and a password with a length greater than or equal to 8 and less than 16 characters.
+🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞
+1 . 👀 First, the user needs to register. To register, you must provide a unique username and a password with a length greater than or equal to 8 and less than 16 characters.
 
 
 
 ![registerUser](https://github.com/102AMIT/TambolaTicket/assets/96186566/4a817ae7-9122-4eb5-b748-5f09eecc5765)
 
 
-2. Once registered, you can log in using the same username and password.
+2. 👀  Once registered, you can log in using the same username and password.
 
 
 ![loginUser](https://github.com/102AMIT/TambolaTicket/assets/96186566/305206d6-05bc-4785-addb-9a1c7687e6ca)
 
 
-3. After successful login, you can create tickets. To create tickets, you need to provide a valid JWT token obtained during the login process. In the request body, include the userId
+3. 👀 After successful login, you can create tickets. To create tickets, you need to provide a valid JWT token obtained during the login process. In the request body, include the userId
    associated with the user and the numberOfTicketSet. Each set contains 6 tickets, so if you pass 2 as numberOfTicketSet, you will receive a total of 12 tickets, separated into sets.
 
 
@@ -44,6 +44,6 @@ Packages Use :
 
 
 
-4.  Finally, you can fetch all the tickets associated with a specific userId. Include the userId in the request parameters. Additionally, you can provide the skip and page parameters for
+4. 👀 Finally, you can fetch all the tickets associated with a specific userId. Include the userId in the request parameters. Additionally, you can provide the skip and page parameters for
     pagination purposes, as per your requirements.
 ![fetch ticket](https://github.com/102AMIT/TambolaTicket/assets/96186566/79eaf3dd-4dc9-4554-8be2-41dd4d21d038)
