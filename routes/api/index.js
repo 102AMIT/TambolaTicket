@@ -5,7 +5,7 @@ const router = Router();
 
 
 // Api routes extended for version one
-router.use("/api", v1);
+router.use("/v1", v1);
 
 
 

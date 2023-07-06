@@ -1,16 +1,22 @@
 import mongoose from "mongoose";
 
-export const TicketSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
+const TicketSchema = new mongoose.Schema({
+  ticketData: {
+    type: [{
+      type: mongoose.Schema.Types.Mixed,
+      required: true,
+    }],
   },
-  password: {
-    type: String,
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
     required: true,
-    unique: false,
   },
 });
 
-export default mongoose.model.Ticket || mongoose.model("Ticket", TicketSchema);
+const Ticket = mongoose.model("Ticket", TicketSchema);
+
+export default Ticket;
+
+
+

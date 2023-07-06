@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 async function connect() {
     mongoose.set('strictQuery', true);
-    const db = mongoose.connect('mongodb://localhost/Tambula', {
+    const db = mongoose.connect(process.env.DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
